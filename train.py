@@ -166,7 +166,7 @@ if __name__=="__main__":
         )
     
     export_module_dir = os.path.join(os.getcwd(), "finetuned_model_export")
-    tf.saved_model.save(model, export_module_dir)
+    model.save('saved_model/my_model')
 
     with open('labels.pickle', "wb") as f:
         f.write(pickle.dumps(class_names))

@@ -11,10 +11,17 @@ python train.py -f <path to your dataset>
 
 ## Inference
 
-Inference can be done by either using the inference script
+Inference can be done by either using the inference script. In order to run an evaluation on the test set, the code expects the image to be in a similar format compared to the training data. 
 
 ```
-python inference.py -f <path to image>
+[Inference]
+
+python inference.py -p <path to image>
+
+[Evaluation]
+
+python inference.py -p <path to dir> --evaluate
+
 ```
 
 or a server can be launched and inference can be obtained from a post request
